@@ -202,16 +202,6 @@ export default function GamesSection() {
           ))}
         </motion.div>
 
-        <p style={{
-          textAlign: 'center',
-          marginTop: '3.5rem',
-          fontFamily: 'var(--font-sans)',
-          fontSize: '0.9rem',
-          color: 'var(--grey-1)',
-          letterSpacing: '0.08em',
-        }}>
-          + 100s more titles installed on server · Request any game upon arrival
-        </p>
 
       </div>
     </section>

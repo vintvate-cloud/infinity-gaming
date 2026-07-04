@@ -82,15 +82,14 @@ export default function Amenities() {
       const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
       if (cards.length === 0 || !deckRef.current) return;
 
-      // Snappy, 60fps fast & fluid GSAP timeline pin scrub
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: deckRef.current,
           start: 'top top',
-          end: `+=${cards.length * 60}%`, // Reduced scroll distance for fast transition
+          end: `+=${cards.length * 65}%`,
           pin: true,
           pinSpacing: true,
-          scrub: 0.3, // Ultra-responsive scrub tracking
+          scrub: 0.4,
           anticipatePin: 1,
         },
       });
@@ -105,7 +104,7 @@ export default function Amenities() {
           );
           tl.to(
             cards[i - 1],
-            { scale: 0.94, opacity: 0.35, ease: 'power2.out' },
+            { scale: 0.93, opacity: 0.3, ease: 'power2.out' },
             i
           );
         }
@@ -140,47 +139,31 @@ export default function Amenities() {
         </div>
       </div>
 
-      {/* FULL-WIDTH FULL-VIEWPORT GSAP PINNED STACKING DECK */}
-      <div ref={deckRef} style={{ width: '100%', height: '100vh', position: 'relative', overflow: 'hidden', padding: '1rem' }}>
+      {/* FULL-WIDTH STACKING DECK CONTAINER FOR ALL SCREENS */}
+      <div ref={deckRef} className="amenity-deck-container" style={{ width: '100%', position: 'relative' }}>
         {AMENITIES.map((card, idx) => (
           <div
             key={card.num}
             ref={(el) => { cardsRef.current[idx] = el; }}
+            className="amenity-card-wrapper"
             style={{
-              position: 'absolute',
-              inset: '1rem',
-              height: 'calc(100vh - 2rem)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: 'clamp(1.5rem, 4vw, 4.5rem)',
               background: card.bgGradient,
-              borderRadius: '32px',
+              borderRadius: 'var(--radius-xl)',
               border: '1.5px solid var(--red-border)',
-              boxShadow: '0 -25px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(229, 9, 20, 0.25)',
+              boxShadow: '0 -20px 50px rgba(0, 0, 0, 0.95), 0 0 45px rgba(229, 9, 20, 0.25)',
               willChange: 'transform, opacity',
-              transform: 'translate3d(0,0,0)',
               zIndex: idx + 1,
-              overflow: 'hidden',
             }}
           >
             {/* Inner Full-Width Grid Content */}
-            <div style={{
-              maxWidth: '1350px',
-              width: '100%',
-              display: 'grid',
-              gridTemplateColumns: '1.1fr 0.9fr',
-              gap: 'clamp(2rem, 4vw, 5rem)',
-              alignItems: 'center',
-              maxHeight: '85vh',
-            }}>
+            <div className="amenity-card-grid">
 
               {/* Left Details */}
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                   <span style={{
                     fontFamily: 'var(--font-display)',
-                    fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                    fontSize: 'clamp(2rem, 4.5vw, 4rem)',
                     color: card.accentColor,
                     lineHeight: 1,
                     textShadow: `0 0 25px ${card.accentColor}`,
@@ -188,9 +171,9 @@ export default function Amenities() {
                     {card.num}
                   </span>
                   <span style={{
-                    fontSize: '1.8rem',
+                    fontSize: '1.4rem',
                     background: 'rgba(255, 255, 255, 0.05)',
-                    padding: '.5rem 1.1rem',
+                    padding: '.35rem .85rem',
                     borderRadius: 'var(--radius-lg)',
                     border: '1px solid var(--border-md)',
                   }}>
@@ -200,10 +183,10 @@ export default function Amenities() {
 
                 <h3 style={{
                   fontFamily: 'var(--font-tech)',
-                  fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+                  fontSize: 'clamp(1.5rem, 3.5vw, 3.5rem)',
                   fontWeight: 900,
                   color: 'var(--white)',
-                  marginBottom: '.6rem',
+                  marginBottom: '.4rem',
                   letterSpacing: '.02em',
                   lineHeight: 1.05,
                 }}>
@@ -212,50 +195,45 @@ export default function Amenities() {
 
                 <div style={{
                   fontFamily: 'var(--font-sans)',
-                  fontSize: 'clamp(.8rem, 1.1vw, 1.05rem)',
+                  fontSize: 'clamp(.7rem, 1vw, 1.05rem)',
                   fontWeight: 700,
                   letterSpacing: '.15em',
                   textTransform: 'uppercase',
                   color: card.accentColor,
-                  marginBottom: '1.25rem',
+                  marginBottom: '.85rem',
                 }}>
                   {card.tagline}
                 </div>
 
-                <p className="body-sm" style={{ marginBottom: '2rem', fontSize: 'clamp(.95rem, 1.2vw, 1.15rem)', lineHeight: 1.65, maxWidth: '580px' }}>
+                <p className="body-sm" style={{ marginBottom: '1.25rem', fontSize: 'clamp(.85rem, 1.1vw, 1.15rem)', lineHeight: 1.55, maxWidth: '580px' }}>
                   {card.desc}
                 </p>
 
                 {/* Features Pills */}
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  gap: '.85rem',
-                  marginBottom: '2rem',
-                }}>
+                <div className="amenity-features-grid">
                   {card.features.map((feature) => (
                     <div
                       key={feature}
                       style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '.75rem',
-                        padding: '.75rem 1rem',
+                        gap: '.6rem',
+                        padding: '.55rem .75rem',
                         background: 'rgba(255, 255, 255, 0.04)',
                         borderRadius: 'var(--radius-md)',
                         border: '1px solid var(--border-md)',
                         fontFamily: 'var(--font-sans)',
-                        fontSize: '.85rem',
+                        fontSize: '.78rem',
                         fontWeight: 600,
                         color: 'var(--white)',
                       }}
                     >
                       <span style={{
-                        width: '8px',
-                        height: '8px',
+                        width: '6px',
+                        height: '6px',
                         borderRadius: '50%',
                         background: card.accentColor,
-                        boxShadow: `0 0 10px ${card.accentColor}`,
+                        boxShadow: `0 0 8px ${card.accentColor}`,
                         flexShrink: 0,
                       }} />
                       {feature}
@@ -263,11 +241,11 @@ export default function Amenities() {
                   ))}
                 </div>
 
-                <div>
+                <div style={{ marginTop: '.25rem' }}>
                   <button
                     onClick={() => window.dispatchEvent(new CustomEvent('openContactModal'))}
                     className="btn btn-red"
-                    style={{ padding: '1rem 2.6rem', fontSize: '.82rem' }}
+                    style={{ padding: '.85rem 2.2rem', fontSize: '.78rem' }}
                   >
                     Reserve {card.title.split(' ')[0]}
                   </button>
@@ -275,15 +253,7 @@ export default function Amenities() {
               </div>
 
               {/* Right Visual Image Card */}
-              <div style={{
-                position: 'relative',
-                height: '100%',
-                maxHeight: '480px',
-                borderRadius: 'var(--radius-xl)',
-                overflow: 'hidden',
-                border: '1.5px solid var(--red-border)',
-                boxShadow: '0 25px 60px rgba(0,0,0,0.85), 0 0 40px var(--red-glow)',
-              }}>
+              <div className="amenity-image-box">
                 <img
                   src={card.image}
                   alt={card.title}
@@ -302,27 +272,27 @@ export default function Amenities() {
                 {/* Badge overlay */}
                 <div style={{
                   position: 'absolute',
-                  bottom: '1.75rem',
-                  left: '1.75rem',
-                  right: '1.75rem',
+                  bottom: '1.25rem',
+                  left: '1.25rem',
+                  right: '1.25rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   background: 'rgba(9, 6, 8, 0.88)',
                   backdropFilter: 'blur(14px)',
-                  padding: '1rem 1.4rem',
+                  padding: '.75rem 1.1rem',
                   borderRadius: 'var(--radius-lg)',
                   border: '1px solid var(--border-md)',
                 }}>
                   <div>
-                    <div style={{ fontFamily: 'var(--font-tech)', fontSize: '.7rem', color: card.accentColor, fontWeight: 700, letterSpacing: '.15em' }}>
+                    <div style={{ fontFamily: 'var(--font-tech)', fontSize: '.65rem', color: card.accentColor, fontWeight: 700, letterSpacing: '.15em' }}>
                       ZONE AMENITY
                     </div>
-                    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', fontWeight: 700, color: 'var(--white)' }}>
+                    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.9rem', fontWeight: 700, color: 'var(--white)' }}>
                       {card.title}
                     </div>
                   </div>
-                  <span style={{ fontSize: '1.5rem' }}>{card.icon}</span>
+                  <span style={{ fontSize: '1.3rem' }}>{card.icon}</span>
                 </div>
               </div>
 

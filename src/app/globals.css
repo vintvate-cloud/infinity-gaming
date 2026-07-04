@@ -275,16 +275,101 @@ body::before {
 /* ─── Map ────────────────────────────────────────────────────── */
 .map-dark { filter: grayscale(1) invert(1) brightness(.35) contrast(1.2) sepia(.2) hue-rotate(310deg); border-radius: var(--radius-xl); }
 
-/* ─── RESPONSIVE BREAKPOINTS FOR ALL SCREENS ──────────────────── */
+/* ─── Amenity Deck Responsiveness ────────────────────────────── */
+.amenity-deck-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.amenity-card-wrapper {
+  position: absolute;
+  inset: 1rem;
+  height: calc(100vh - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 4vw, 4.5rem);
+  overflow: hidden;
+}
+
+.amenity-card-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: center;
+  width: 100%;
+  max-width: 1350px;
+}
+
+.amenity-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .85rem;
+  margin-bottom: 2rem;
+}
+
+.amenity-image-box {
+  position: relative;
+  height: 100%;
+  max-height: 480px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1.5px solid var(--red-border);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.85), 0 0 40px var(--red-glow);
+}
+
+/* Phone & Tablet Amenities Adaptations */
+@media (max-width: 900px) {
+  .amenity-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .amenity-image-box {
+    max-height: 200px;
+    min-height: 150px;
+  }
+  .amenity-features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .amenity-deck-container {
+    padding: .5rem;
+  }
+  .amenity-card-wrapper {
+    inset: .5rem;
+    height: calc(100vh - 1rem);
+    padding: 1.25rem 1rem;
+  }
+  .amenity-image-box {
+    display: none;
+  }
+  .amenity-features-grid {
+    grid-template-columns: 1fr;
+    gap: .4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ─── GENERAL RESPONSIVE BREAKPOINTS FOR ALL SCREENS ──────────── */
+.mobile-only { display: none; }
+.desktop-only { display: inline-flex; }
+
 @media (max-width: 960px) {
   .nav {
     width: calc(100% - 2rem);
     padding: .75rem 1.25rem;
     top: 1rem;
   }
-  .nav-links { display: none; }
-  .desktop-only { display: none; }
-  .mobile-only { display: block; }
+  .nav-links { display: none !important; }
+  .desktop-only { display: none !important; }
+  .mobile-only { display: flex !important; }
   .section { padding: 4rem 1.25rem; }
 }
 
@@ -293,8 +378,11 @@ body::before {
     width: calc(100% - 1.5rem);
     padding: .65rem 1rem;
   }
-  .display-xl { font-size: clamp(3.2rem, 14vw, 5rem); }
-  .display-lg { font-size: clamp(2.5rem, 10vw, 4rem); }
-  .display-md { font-size: clamp(2rem, 8vw, 3rem); }
+  .display-xl { font-size: clamp(3rem, 13vw, 4.5rem); }
+  .display-lg { font-size: clamp(2.2rem, 9vw, 3.5rem); }
+  .display-md { font-size: clamp(1.8rem, 7.5vw, 2.8rem); }
   .btn { padding: .85rem 1.75rem; font-size: .75rem; width: 100%; justify-content: center; }
 }
+
+
+
