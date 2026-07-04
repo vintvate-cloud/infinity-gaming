@@ -53,7 +53,7 @@ const SP: Game[] = [
   {
     id: 'tlou2', title: 'The Last of Us Part II', genre: 'Survival Drama',
     category: 'singleplayer', platform: 'PS5', rating: '9.4',
-    poster: 'https://image.api.playstation.com/vulcan/ap/rnd/202010/2012/IhChPr5xTCujolzNI2jlClna.png',
+    poster: 'https://cdn.akamai.steamstatic.com/steam/apps/1888930/header.jpg',
     description: 'A harrowing journey of vengeance.',
   },
   {
@@ -65,7 +65,7 @@ const SP: Game[] = [
   {
     id: 'yotei', title: 'Ghost of Yōtei', genre: 'Open World',
     category: 'singleplayer', platform: 'PS5', rating: '9.6',
-    poster: 'https://image.api.playstation.com/vulcan/ap/rnd/202409/1820/a97576eb0a4e768f5c9eebca70308dcf202bbbd1fd36b0fa.png',
+    poster: 'https://cdn.akamai.steamstatic.com/steam/apps/2215430/library_600x900_2x.jpg',
     description: 'The next chapter of Sucker Punch\'s samurai saga.',
   },
   {
@@ -141,7 +141,7 @@ const TP: Game[] = [
   {
     id: 'ufc5', title: 'EA Sports UFC 5', genre: 'MMA Fighting',
     category: 'twoplayer', platform: 'PS5', rating: '8.3',
-    poster: 'https://image.api.playstation.com/vulcan/ap/rnd/202308/1721/e4f71a0678d46df3cbbdfa2072120e2efed2ad2714c693a7.png',
+    poster: 'https://cdn.akamai.steamstatic.com/steam/apps/2394660/header.jpg',
     description: 'The most realistic MMA simulation.',
   },
 ];
@@ -157,7 +157,7 @@ const MP: Game[] = [
   {
     id: 'fortnite', title: 'Fortnite', genre: 'Battle Royale',
     category: 'multiplayer', platform: 'Both', rating: '8.5',
-    poster: 'https://image.api.playstation.com/vulcan/ap/rnd/202311/2800/690db3132cf05d6cb4828f747bf62c161860fbc356cb6239.png',
+    poster: 'https://cdn.akamai.steamstatic.com/steam/apps/1172470/header.jpg',
     description: 'The cultural phenomenon battle royale.',
   },
   {
@@ -169,7 +169,7 @@ const MP: Game[] = [
   {
     id: 'valorant', title: 'Valorant', genre: 'Tactical FPS',
     category: 'multiplayer', platform: 'PC', rating: '9.0',
-    poster: 'https://image.api.playstation.com/vulcan/ap/rnd/202405/2921/e4fcebf152e93fcbe44b58e7627440317e3f22ae3f89839c.png',
+    poster: 'https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg',
     description: 'Riot\'s ultra-precise 5v5 tactical shooter.',
   },
   {

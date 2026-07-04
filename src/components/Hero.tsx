@@ -25,7 +25,6 @@ export default function Hero() {
       gsap.from('.hero-eyebrow', { y: 20, opacity: 0, duration: .9, delay: 2.8, ease: 'power3.out' });
       gsap.from('.hero-sub',     { y: 22, opacity: 0, duration: 1,  delay: 3.3, ease: 'power3.out' });
       gsap.from('.hero-ctas',    { y: 22, opacity: 0, duration: 1,  delay: 3.5, ease: 'power3.out' });
-      gsap.from('.hero-scroll',  { opacity: 0, duration: 1, delay: 4.0, ease: 'power2.out' });
 
       gsap.to('.hero-img-bg', {
         scale: 1.08, ease: 'none',
@@ -120,20 +119,6 @@ export default function Hero() {
               </button>
               <a href="#games" className="btn btn-outline">Browse Games</a>
             </div>
-          </div>
-
-          {/* Scroll hint */}
-          <div
-            className="hero-scroll"
-            style={{
-              position: 'absolute', right: 0, bottom: '-3.5rem',
-              display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '.6rem',
-            }}
-          >
-            <div style={{ fontFamily: 'var(--font-tech)', fontSize: '.65rem', letterSpacing: '.2em', color: 'var(--red-bright)', writingMode: 'vertical-lr', textTransform: 'uppercase', fontWeight: 600 }}>
-              Scroll
-            </div>
-            <div style={{ width: '2px', height: '55px', background: 'linear-gradient(to bottom, var(--red-bright), transparent)', borderRadius: 'var(--radius-full)' }} />
           </div>
         </div>
       </section>

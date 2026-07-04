@@ -74,32 +74,41 @@ const AMENITIES = [
 
 export default function Amenities() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const deckRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
-      if (cards.length === 0) return;
+      if (cards.length === 0 || !deckRef.current) return;
 
-      cards.forEach((card, index) => {
-        // Skip pinning the last card
-        if (index === cards.length - 1) return;
+      // Snappy, 60fps fast & fluid GSAP timeline pin scrub
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: deckRef.current,
+          start: 'top top',
+          end: `+=${cards.length * 60}%`, // Reduced scroll distance for fast transition
+          pin: true,
+          pinSpacing: true,
+          scrub: 0.3, // Ultra-responsive scrub tracking
+          anticipatePin: 1,
+        },
+      });
 
-        const nextCard = cards[index + 1];
-
-        // GSAP ScrollTrigger to scale down and dim card as next card scrolls over
-        gsap.to(card, {
-          scale: 0.92,
-          opacity: 0.4,
-          filter: 'blur(8px)',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: nextCard,
-            start: 'top bottom',
-            end: 'top top',
-            scrub: true,
-          },
-        });
+      cards.forEach((card, i) => {
+        if (i > 0) {
+          tl.fromTo(
+            card,
+            { yPercent: 100 },
+            { yPercent: 0, ease: 'power2.out' },
+            i
+          );
+          tl.to(
+            cards[i - 1],
+            { scale: 0.94, opacity: 0.35, ease: 'power2.out' },
+            i
+          );
+        }
       });
     }, containerRef);
 
@@ -109,7 +118,7 @@ export default function Amenities() {
   return (
     <section id="amenities" ref={containerRef} style={{ background: 'var(--black)', position: 'relative' }}>
       
-      {/* Top Section Intro Header */}
+      {/* Intro Header */}
       <div className="section-inner" style={{ padding: '6rem 1.5rem 3rem' }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
           <div>
@@ -131,55 +140,57 @@ export default function Amenities() {
         </div>
       </div>
 
-      {/* Full Screen Cards Container */}
-      <div style={{ width: '100%', position: 'relative' }}>
+      {/* FULL-WIDTH FULL-VIEWPORT GSAP PINNED STACKING DECK */}
+      <div ref={deckRef} style={{ width: '100%', height: '100vh', position: 'relative', overflow: 'hidden', padding: '1rem' }}>
         {AMENITIES.map((card, idx) => (
           <div
             key={card.num}
             ref={(el) => { cardsRef.current[idx] = el; }}
             style={{
-              position: 'sticky',
-              top: 0,
-              height: '100vh',
-              width: '100%',
+              position: 'absolute',
+              inset: '1rem',
+              height: 'calc(100vh - 2rem)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: 'clamp(1.5rem, 4vw, 4rem)',
+              padding: 'clamp(1.5rem, 4vw, 4.5rem)',
               background: card.bgGradient,
-              boxShadow: '0 -20px 60px rgba(0, 0, 0, 0.9), 0 0 50px rgba(229, 9, 20, 0.15)',
-              willChange: 'transform, opacity, filter',
+              borderRadius: '32px',
+              border: '1.5px solid var(--red-border)',
+              boxShadow: '0 -25px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(229, 9, 20, 0.25)',
+              willChange: 'transform, opacity',
+              transform: 'translate3d(0,0,0)',
+              zIndex: idx + 1,
               overflow: 'hidden',
             }}
           >
-            {/* Inner Full Screen Content Box */}
+            {/* Inner Full-Width Grid Content */}
             <div style={{
-              maxWidth: '1320px',
+              maxWidth: '1350px',
               width: '100%',
               display: 'grid',
               gridTemplateColumns: '1.1fr 0.9fr',
-              gap: 'clamp(2rem, 5vw, 5rem)',
+              gap: 'clamp(2rem, 4vw, 5rem)',
               alignItems: 'center',
-              height: '100%',
               maxHeight: '85vh',
             }}>
 
               {/* Left Details */}
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.25rem' }}>
                   <span style={{
                     fontFamily: 'var(--font-display)',
                     fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                     color: card.accentColor,
                     lineHeight: 1,
-                    textShadow: `0 0 20px ${card.accentColor}`,
+                    textShadow: `0 0 25px ${card.accentColor}`,
                   }}>
                     {card.num}
                   </span>
                   <span style={{
-                    fontSize: '2rem',
+                    fontSize: '1.8rem',
                     background: 'rgba(255, 255, 255, 0.05)',
-                    padding: '.6rem 1.2rem',
+                    padding: '.5rem 1.1rem',
                     borderRadius: 'var(--radius-lg)',
                     border: '1px solid var(--border-md)',
                   }}>
@@ -189,10 +200,10 @@ export default function Amenities() {
 
                 <h3 style={{
                   fontFamily: 'var(--font-tech)',
-                  fontSize: 'clamp(2rem, 4vw, 3.6rem)',
+                  fontSize: 'clamp(2rem, 4vw, 3.5rem)',
                   fontWeight: 900,
                   color: 'var(--white)',
-                  marginBottom: '.75rem',
+                  marginBottom: '.6rem',
                   letterSpacing: '.02em',
                   lineHeight: 1.05,
                 }}>
@@ -201,17 +212,17 @@ export default function Amenities() {
 
                 <div style={{
                   fontFamily: 'var(--font-sans)',
-                  fontSize: 'clamp(.85rem, 1.2vw, 1.1rem)',
+                  fontSize: 'clamp(.8rem, 1.1vw, 1.05rem)',
                   fontWeight: 700,
                   letterSpacing: '.15em',
                   textTransform: 'uppercase',
                   color: card.accentColor,
-                  marginBottom: '1.5rem',
+                  marginBottom: '1.25rem',
                 }}>
                   {card.tagline}
                 </div>
 
-                <p className="body-sm" style={{ marginBottom: '2.5rem', fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', lineHeight: 1.7, maxWidth: '580px' }}>
+                <p className="body-sm" style={{ marginBottom: '2rem', fontSize: 'clamp(.95rem, 1.2vw, 1.15rem)', lineHeight: 1.65, maxWidth: '580px' }}>
                   {card.desc}
                 </p>
 
@@ -219,8 +230,8 @@ export default function Amenities() {
                 <div style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
-                  gap: '1rem',
-                  marginBottom: '2.5rem',
+                  gap: '.85rem',
+                  marginBottom: '2rem',
                 }}>
                   {card.features.map((feature) => (
                     <div
@@ -229,12 +240,12 @@ export default function Amenities() {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '.75rem',
-                        padding: '.85rem 1.1rem',
+                        padding: '.75rem 1rem',
                         background: 'rgba(255, 255, 255, 0.04)',
                         borderRadius: 'var(--radius-md)',
                         border: '1px solid var(--border-md)',
                         fontFamily: 'var(--font-sans)',
-                        fontSize: '.88rem',
+                        fontSize: '.85rem',
                         fontWeight: 600,
                         color: 'var(--white)',
                       }}
@@ -256,7 +267,7 @@ export default function Amenities() {
                   <button
                     onClick={() => window.dispatchEvent(new CustomEvent('openContactModal'))}
                     className="btn btn-red"
-                    style={{ padding: '1.1rem 2.75rem', fontSize: '.85rem' }}
+                    style={{ padding: '1rem 2.6rem', fontSize: '.82rem' }}
                   >
                     Reserve {card.title.split(' ')[0]}
                   </button>
@@ -267,11 +278,11 @@ export default function Amenities() {
               <div style={{
                 position: 'relative',
                 height: '100%',
-                maxHeight: '520px',
+                maxHeight: '480px',
                 borderRadius: 'var(--radius-xl)',
                 overflow: 'hidden',
-                border: '1px solid var(--red-border)',
-                boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 35px var(--red-glow)',
+                border: '1.5px solid var(--red-border)',
+                boxShadow: '0 25px 60px rgba(0,0,0,0.85), 0 0 40px var(--red-glow)',
               }}>
                 <img
                   src={card.image}
@@ -285,21 +296,21 @@ export default function Amenities() {
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(to top, rgba(18, 10, 14, 0.9) 0%, rgba(18, 10, 14, 0.2) 60%, transparent 100%)',
+                  background: 'linear-gradient(to top, rgba(18, 10, 14, 0.92) 0%, rgba(18, 10, 14, 0.2) 60%, transparent 100%)',
                 }} />
                 
                 {/* Badge overlay */}
                 <div style={{
                   position: 'absolute',
-                  bottom: '2rem',
-                  left: '2rem',
-                  right: '2rem',
+                  bottom: '1.75rem',
+                  left: '1.75rem',
+                  right: '1.75rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  background: 'rgba(9, 6, 8, 0.85)',
-                  backdropFilter: 'blur(12px)',
-                  padding: '1rem 1.5rem',
+                  background: 'rgba(9, 6, 8, 0.88)',
+                  backdropFilter: 'blur(14px)',
+                  padding: '1rem 1.4rem',
                   borderRadius: 'var(--radius-lg)',
                   border: '1px solid var(--border-md)',
                 }}>
@@ -319,19 +330,6 @@ export default function Amenities() {
           </div>
         ))}
       </div>
-
-      <style>{`
-        @media (max-width: 960px) {
-          #amenities [style*="grid-template-columns: 1.1fr 0.9fr"] {
-            grid-template-columns: 1fr !important;
-            max-height: none !important;
-            overflow-y: auto;
-          }
-          #amenities [style*="max-height: 520px"] {
-            display: none !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }
