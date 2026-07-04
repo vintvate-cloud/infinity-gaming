@@ -52,7 +52,7 @@ const AMENITIES = [
     bgGradient: 'linear-gradient(135deg, #260C18 0%, #10050B 100%)',
     accentColor: '#FF4D55',
     icon: '🎱',
-    image: 'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/pool_table.png',
   },
   {
     num: '04',
@@ -78,7 +78,10 @@ export default function Amenities() {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    const mm = gsap.matchMedia();
+
+    // DESKTOP ONLY: GSAP Pinning Deck Stacking
+    mm.add('(min-width: 769px)', () => {
       const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
       if (cards.length === 0 || !deckRef.current) return;
 
@@ -86,10 +89,10 @@ export default function Amenities() {
         scrollTrigger: {
           trigger: deckRef.current,
           start: 'top top',
-          end: `+=${cards.length * 65}%`,
+          end: `+=${cards.length * 60}%`,
           pin: true,
           pinSpacing: true,
-          scrub: 0.4,
+          scrub: 0.3,
           anticipatePin: 1,
         },
       });
@@ -104,14 +107,14 @@ export default function Amenities() {
           );
           tl.to(
             cards[i - 1],
-            { scale: 0.93, opacity: 0.3, ease: 'power2.out' },
+            { scale: 0.94, opacity: 0.35, ease: 'power2.out' },
             i
           );
         }
       });
-    }, containerRef);
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   return (
@@ -139,8 +142,8 @@ export default function Amenities() {
         </div>
       </div>
 
-      {/* FULL-WIDTH STACKING DECK CONTAINER FOR ALL SCREENS */}
-      <div ref={deckRef} className="amenity-deck-container" style={{ width: '100%', position: 'relative' }}>
+      {/* FULL-WIDTH STACKING DECK CONTAINER */}
+      <div ref={deckRef} className="amenity-deck-container">
         {AMENITIES.map((card, idx) => (
           <div
             key={card.num}
@@ -158,7 +161,7 @@ export default function Amenities() {
             {/* Inner Full-Width Grid Content */}
             <div className="amenity-card-grid">
 
-              {/* Left Details */}
+              {/* Details Column */}
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                   <span style={{
@@ -252,7 +255,7 @@ export default function Amenities() {
                 </div>
               </div>
 
-              {/* Right Visual Image Card */}
+              {/* Visual Image Card */}
               <div className="amenity-image-box">
                 <img
                   src={card.image}
@@ -272,27 +275,27 @@ export default function Amenities() {
                 {/* Badge overlay */}
                 <div style={{
                   position: 'absolute',
-                  bottom: '1.25rem',
-                  left: '1.25rem',
-                  right: '1.25rem',
+                  bottom: '1rem',
+                  left: '1rem',
+                  right: '1rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   background: 'rgba(9, 6, 8, 0.88)',
                   backdropFilter: 'blur(14px)',
-                  padding: '.75rem 1.1rem',
+                  padding: '.65rem 1rem',
                   borderRadius: 'var(--radius-lg)',
                   border: '1px solid var(--border-md)',
                 }}>
                   <div>
-                    <div style={{ fontFamily: 'var(--font-tech)', fontSize: '.65rem', color: card.accentColor, fontWeight: 700, letterSpacing: '.15em' }}>
+                    <div style={{ fontFamily: 'var(--font-tech)', fontSize: '.6rem', color: card.accentColor, fontWeight: 700, letterSpacing: '.15em' }}>
                       ZONE AMENITY
                     </div>
-                    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.9rem', fontWeight: 700, color: 'var(--white)' }}>
+                    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.85rem', fontWeight: 700, color: 'var(--white)' }}>
                       {card.title}
                     </div>
                   </div>
-                  <span style={{ fontSize: '1.3rem' }}>{card.icon}</span>
+                  <span style={{ fontSize: '1.2rem' }}>{card.icon}</span>
                 </div>
               </div>
 

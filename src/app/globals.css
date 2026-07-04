@@ -322,38 +322,46 @@ body::before {
 }
 
 /* Phone & Tablet Amenities Adaptations */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .amenity-deck-container {
+    height: auto !important;
+    position: relative !important;
+    overflow: visible !important;
+    padding: 1rem 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .amenity-card-wrapper {
+    position: relative !important;
+    inset: auto !important;
+    height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    padding: 1.5rem 1.25rem !important;
+    margin-bottom: 0 !important;
+  }
   .amenity-card-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
   }
   .amenity-image-box {
-    max-height: 200px;
-    min-height: 150px;
+    display: block !important;
+    height: 200px !important;
+    max-height: 200px !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
   }
   .amenity-features-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: .5rem;
-    margin-bottom: 1.25rem;
+    grid-template-columns: 1fr 1fr !important;
+    gap: .5rem !important;
+    margin-bottom: 1.25rem !important;
   }
 }
 
-@media (max-width: 600px) {
-  .amenity-deck-container {
-    padding: .5rem;
-  }
-  .amenity-card-wrapper {
-    inset: .5rem;
-    height: calc(100vh - 1rem);
-    padding: 1.25rem 1rem;
-  }
-  .amenity-image-box {
-    display: none;
-  }
+@media (max-width: 480px) {
   .amenity-features-grid {
-    grid-template-columns: 1fr;
-    gap: .4rem;
-    margin-bottom: 1rem;
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -383,6 +391,7 @@ body::before {
   .display-md { font-size: clamp(1.8rem, 7.5vw, 2.8rem); }
   .btn { padding: .85rem 1.75rem; font-size: .75rem; width: 100%; justify-content: center; }
 }
+
 
 
 
