@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Infinity Gaming — Premium Gaming Lounge | MP Nagar, Bhopal",
+  title: "NEON GAMING — Premium Gaming Lounge | MP Nagar, Bhopal",
   description:
     "Bhopal's most premium gaming lounge in MP Nagar. PS5 consoles, RTX 4090 PCs, pool tables, private rooms, and 200+ titles. Open daily 10 AM – 11 PM.",
-  keywords: ["gaming cafe bhopal", "infinity gaming", "ps5 bhopal", "gaming lounge MP nagar", "PC gaming bhopal"],
+  keywords: ["gaming cafe bhopal", "NEON GAMING", "ps5 bhopal", "gaming lounge MP nagar", "PC gaming bhopal"],
   openGraph: {
-    title: "Infinity Gaming — The Premium Gaming Lounge | MP Nagar, Bhopal",
+    title: "NEON GAMING — The Premium Gaming Lounge | MP Nagar, Bhopal",
     description: "Where legends are made. PS5, PC, Pool & Private Rooms.",
     type: "website",
   },

@@ -45,7 +45,7 @@ export default function Footer() {
 
       {/* MEGA TYPOGRAPHY */}
       <div style={{ padding: '4rem clamp(1.5rem,5vw,5rem) 0', overflow: 'hidden' }}>
-        <div className="footer-mega-line footer-mega" style={{ display: 'block', color: 'var(--surface-3)' }}>INFINITY</div>
+        <div className="footer-mega-line footer-mega" style={{ display: 'block', color: 'var(--surface-3)' }}>NEON</div>
         <div
           className="footer-mega-line footer-mega"
           style={{ display: 'block', marginTop: '-.15em', color: 'var(--red-deep)', opacity: 0.6 }}
@@ -72,7 +72,7 @@ export default function Footer() {
           <div>
             <div style={{ marginBottom: '1.25rem' }}>
               <span style={{ fontFamily: 'var(--font-tech)', fontSize: '1.3rem', fontWeight: 800, letterSpacing: '.12em', color: 'var(--white)' }}>
-                INFINITY<span style={{ color: 'var(--red-bright)' }}>.</span>
+                NEON<span style={{ color: 'var(--red-bright)' }}>.</span>
               </span>
             </div>
 
@@ -151,7 +151,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ marginTop: '3.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.75rem', fontWeight: 400, color: 'var(--grey-1)' }}>
-            © 2025 Infinity Gaming, Bhopal. All rights reserved.
+            © 2025 NEON GAMING, Bhopal. All rights reserved.
           </span>
           <div style={{ display: 'flex', gap: '2rem' }}>
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map(t => (

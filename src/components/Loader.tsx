@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
-  const [reveal,   setReveal]   = useState(false);
-  const [hidden,   setHidden]   = useState(false);
+  const [reveal, setReveal] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     // Word reveal
@@ -46,7 +46,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     >
       {/* Title */}
       <div className={`loader-word ${reveal ? 'reveal' : ''}`}>
-        <span>INFINITY</span>
+        <span>NEON</span>
       </div>
 
       <div style={{

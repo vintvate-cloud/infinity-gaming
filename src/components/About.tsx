@@ -59,7 +59,7 @@ export default function About() {
               </span>
             </h2>
             <p className="body-sm" style={{ marginBottom: '1.5rem' }}>
-              Infinity Gaming was engineered with a single objective — delivering an unrivaled esports and entertainment lounge in MP Nagar, Bhopal.
+              NEON GAMING was engineered with a single objective — delivering an unrivaled esports and entertainment lounge in MP Nagar, Bhopal.
             </p>
             <p className="body-sm" style={{ marginBottom: '2.5rem' }}>
               From high-fps PC setups to private 4K console suites and slate pool tables, every square foot offers peak comfort, lighting, and hospitality.

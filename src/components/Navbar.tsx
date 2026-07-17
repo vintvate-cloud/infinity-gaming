@@ -3,16 +3,16 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const links = [
-  { href: '#about',     label: 'About'     },
+  { href: '#about', label: 'About' },
   { href: '#amenities', label: 'Amenities' },
-  { href: '#games',     label: 'Vault'     },
-  { href: '#pricing',   label: 'Rates'     },
-  { href: '#location',  label: 'Location'  },
+  { href: '#games', label: 'Vault' },
+  { href: '#pricing', label: 'Rates' },
+  { href: '#location', label: 'Location' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobile,   setMobile]   = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -28,7 +28,7 @@ export default function Navbar() {
     <>
       <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
         <a href="#hero" className="nav-logo">
-          INFINITY<span>.</span>
+          NEON<span>.</span>
         </a>
 
         {/* Desktop links */}
@@ -129,7 +129,7 @@ export default function Navbar() {
               color: 'var(--white)',
               marginBottom: '1rem',
             }}>
-              INFINITY<span style={{ color: 'var(--red-bright)' }}>.</span>
+              NEON<span style={{ color: 'var(--red-bright)' }}>.</span>
             </div>
 
             {/* Nav links */}

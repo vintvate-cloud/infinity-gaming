@@ -58,7 +58,7 @@ export default function ContactModal() {
               BOOK A SESSION
             </div>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.72rem', color: 'var(--red-light)', letterSpacing: '.12em', marginTop: '.2rem', fontWeight: 600 }}>
-              INFINITY GAMING · MP NAGAR, BHOPAL
+              NEON GAMING · MP NAGAR, BHOPAL
             </div>
           </div>
           <button
@@ -91,7 +91,7 @@ export default function ContactModal() {
                 BOOKING REQUEST SENT
               </div>
               <p className="body-sm" style={{ marginBottom: '2rem', fontSize: '.9rem' }}>
-                We'll contact you immediately to confirm your reservation. See you at Infinity Gaming!
+                We'll contact you immediately to confirm your reservation. See you at NEON GAMING!
               </p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <button onClick={() => setSent(false)} className="btn btn-outline" style={{ fontSize: '.75rem' }}>

@@ -23,8 +23,8 @@ export default function Hero() {
         y: 0, duration: 1.3, stagger: .13, ease: 'expo.out', delay: 2.8,
       });
       gsap.from('.hero-eyebrow', { y: 20, opacity: 0, duration: .9, delay: 2.8, ease: 'power3.out' });
-      gsap.from('.hero-sub',     { y: 22, opacity: 0, duration: 1,  delay: 3.3, ease: 'power3.out' });
-      gsap.from('.hero-ctas',    { y: 22, opacity: 0, duration: 1,  delay: 3.5, ease: 'power3.out' });
+      gsap.from('.hero-sub', { y: 22, opacity: 0, duration: 1, delay: 3.3, ease: 'power3.out' });
+      gsap.from('.hero-ctas', { y: 22, opacity: 0, duration: 1, delay: 3.5, ease: 'power3.out' });
 
       gsap.to('.hero-img-bg', {
         scale: 1.08, ease: 'none',
@@ -81,7 +81,7 @@ export default function Hero() {
             fontSize: 'clamp(9rem, 22vw, 24rem)', pointerEvents: 'none', userSelect: 'none', zIndex: 1,
           }}
         >
-          INFINITY
+          NEON
         </div>
 
         {/* Main Content */}
@@ -96,7 +96,7 @@ export default function Hero() {
           <div style={{ marginBottom: '2.5rem' }}>
             <div className="clip-reveal">
               <span className="clip-reveal-inner display-xl" style={{ display: 'block' }}>
-                INFINITY
+                NEON
               </span>
             </div>
             <div className="clip-reveal">

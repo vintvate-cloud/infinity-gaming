@@ -67,7 +67,7 @@ export default function Contact() {
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--red-bright)', marginBottom: '.5rem', textShadow: '0 0 10px var(--red-glow)' }}>
                     REQUEST RECEIVED
                   </div>
-                  <p className="body-sm">We'll contact you shortly. See you at Infinity Gaming!</p>
+                  <p className="body-sm">We'll contact you shortly. See you at NEON GAMING!</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
