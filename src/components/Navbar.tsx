@@ -6,6 +6,7 @@ const links = [
   { href: '#about', label: 'About' },
   { href: '#amenities', label: 'Amenities' },
   { href: '#games', label: 'Vault' },
+  { href: '#tournaments', label: 'Tournaments' },
   { href: '#pricing', label: 'Rates' },
   { href: '#location', label: 'Location' },
 ];
@@ -44,12 +45,13 @@ export default function Navbar() {
 
         {/* CTA */}
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-          <button
-            onClick={() => window.dispatchEvent(new CustomEvent('openContactModal'))}
+          <a
+            href="tel:+917067601040"
             className="nav-cta desktop-only"
+            style={{ textDecoration: 'none' }}
           >
             Book Session
-          </button>
+          </a>
           <button
             onClick={() => setMobile(true)}
             className="mobile-only"
@@ -156,16 +158,14 @@ export default function Navbar() {
             </div>
 
             {/* Book Now Button */}
-            <button
-              onClick={() => {
-                setMobile(false);
-                window.dispatchEvent(new CustomEvent('openContactModal'));
-              }}
+            <a
+              href="tel:+917067601040"
+              onClick={() => setMobile(false)}
               className="btn btn-red"
-              style={{ marginTop: '1rem', padding: '1.1rem 2.8rem', fontSize: '.85rem' }}
+              style={{ marginTop: '1rem', padding: '1.1rem 2.8rem', fontSize: '.85rem', textDecoration: 'none' }}
             >
               Book Session Now
-            </button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -9,6 +9,7 @@ const Navbar         = dynamic(() => import('@/components/Navbar'),         { ss
 const Hero           = dynamic(() => import('@/components/Hero'),           { ssr: false });
 const About          = dynamic(() => import('@/components/About'),          { ssr: false });
 const GamesSection   = dynamic(() => import('@/components/GamesSection'),   { ssr: false });
+const Tournaments    = dynamic(() => import('@/components/Tournaments'),    { ssr: false });
 const Pricing        = dynamic(() => import('@/components/Pricing'),        { ssr: false });
 const Amenities      = dynamic(() => import('@/components/Amenities'),      { ssr: false });
 const Location       = dynamic(() => import('@/components/Location'),       { ssr: false });
@@ -33,6 +34,7 @@ export default function Home() {
           <Hero />
           <About />
           <GamesSection />
+          <Tournaments />
           <Pricing />
           <Amenities />
           <Location />

@@ -1,14 +1,7 @@
 'use client';
-import { useState } from 'react';
+
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ name: '', phone: '', session: 'ps5', message: '' });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-  };
 
   return (
     <section id="contact" className="section" style={{ background: 'var(--black)' }}>
@@ -44,7 +37,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div style={{ fontSize: '.72rem', color: 'var(--grey-1)', textTransform: 'uppercase', letterSpacing: '.1em', fontWeight: 600 }}>Phone / WhatsApp</div>
-                    <div style={{ fontFamily: 'var(--font-tech)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--white)' }}>+91 98000 00000</div>
+                    <div style={{ fontFamily: 'var(--font-tech)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--white)' }}>+91 70676 01040</div>
                   </div>
                 </div>
 
@@ -60,38 +53,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Right Form */}
-            <div>
-              {sent ? (
-                <div style={{ padding: '3rem 2rem', background: 'var(--surface-3)', borderRadius: 'var(--radius-lg)', textAlign: 'center', border: '1px solid var(--red-border)' }}>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--red-bright)', marginBottom: '.5rem', textShadow: '0 0 10px var(--red-glow)' }}>
-                    REQUEST RECEIVED
-                  </div>
-                  <p className="body-sm">We'll contact you shortly. See you at NEON GAMING!</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  <div>
-                    <label className="form-label">Full Name</label>
-                    <input type="text" required placeholder="Arjun Sharma" className="form-input"
-                      value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
-                  </div>
-                  <div>
-                    <label className="form-label">Phone Number</label>
-                    <input type="tel" required placeholder="+91 98000 00000" className="form-input"
-                      value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} />
-                  </div>
-                  <div>
-                    <label className="form-label">Message / Time</label>
-                    <textarea rows={3} placeholder="Tell us what you want to play or reserve..." className="form-input"
-                      value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
-                  </div>
-                  <button type="submit" className="btn btn-red" style={{ width: '100%' }}>
-                    Submit Reservation
-                  </button>
-                </form>
-              )}
-            </div>
+
 
           </div>
         </div>
