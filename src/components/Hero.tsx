@@ -114,9 +114,9 @@ export default function Hero() {
             </p>
 
             <div className="hero-ctas" style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap' }}>
-              <button onClick={openModal} className="btn btn-red">
+              <a href="tel:+917067601040" className="btn btn-red" style={{ textDecoration: 'none' }}>
                 Book a Station
-              </button>
+              </a>
               <a href="#games" className="btn btn-outline">Browse Games</a>
             </div>
           </div>

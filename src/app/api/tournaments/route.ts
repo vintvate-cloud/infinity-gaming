@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
@@ -43,8 +43,8 @@ export async function POST(request: Request) {
     const tournaments = getTournaments();
     
     const newTournament = {
-      id: Date.now().toString(),
       ...body,
+      id: Date.now().toString(),
       createdAt: new Date().toISOString()
     };
     
@@ -78,10 +78,9 @@ export async function PUT(request: Request) {
   }
 }
 
-export async function DELETE(request: Request) {
+export async function DELETE(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
+    const id = request.nextUrl.searchParams.get('id');
     
     if (!id) return NextResponse.json({ success: false, error: 'ID is required' }, { status: 400 });
     

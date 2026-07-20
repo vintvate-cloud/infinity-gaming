@@ -16,8 +16,26 @@ const FALLBACKS: Record<string, string[]> = {
 export default function GamesSection() {
   const ref = useRef<HTMLElement>(null);
   const [active, setActive] = useState<GameCategory>('singleplayer');
-  const filtered = games.filter(g => g.category === active);
-  const cat = categories.find(c => c.id === active)!;
+  const [gamesList, setGamesList] = useState(games);
+
+  useEffect(() => {
+    fetch('/api/games')
+      .then(res => res.json())
+      .then(data => {
+        if (data && Array.isArray(data) && data.length > 0) {
+          setGamesList(data);
+        }
+      })
+      .catch(err => console.error('Failed to fetch games:', err));
+  }, []);
+
+  const filtered = gamesList.filter((g: any) => g.category === active);
+  
+  const dynamicCategories = categories.map(c => ({
+    ...c,
+    count: gamesList.filter((g: any) => g.category === c.id).length
+  }));
+  const cat = dynamicCategories.find(c => c.id === active)!;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -54,7 +72,7 @@ export default function GamesSection() {
               </span>
             </h2>
             <p className="body-sm" style={{ maxWidth: '420px', fontSize: '1rem' }}>
-              {games.length}+ AAA titles across PS5 & high-end PCs. Filter by playstyle below.
+              {gamesList.length}+ AAA titles across PS5 & high-end PCs. Filter by playstyle below.
             </p>
           </div>
         </div>
@@ -66,7 +84,7 @@ export default function GamesSection() {
           marginBottom: '1.5rem',
           flexWrap: 'wrap',
         }}>
-          {categories.map(c => (
+          {dynamicCategories.map(c => (
             <button
               key={c.id}
               onClick={() => setActive(c.id as GameCategory)}

@@ -257,10 +257,10 @@ export default function Pricing() {
             </p>
           </div>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%', maxWidth: '360px' }}>
-            <button onClick={() => window.dispatchEvent(new CustomEvent('openContactModal'))} className="btn btn-red" style={{ flex: 1 }}>
+            <a href="tel:+917067601040" className="btn btn-red" style={{ flex: 1, textDecoration: 'none', textAlign: 'center' }}>
               Book a Room
-            </button>
-            <a href="https://wa.me/919800000000" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ flex: 1 }}>
+            </a>
+            <a href="https://wa.me/917067601040" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ flex: 1 }}>
               WhatsApp Us ↗
             </a>
           </div>

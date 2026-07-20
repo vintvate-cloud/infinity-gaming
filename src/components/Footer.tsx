@@ -134,7 +134,7 @@ export default function Footer() {
                 {col.items.map(item => (
                   <li key={item}>
                     <a
-                      href="#"
+                      href={item === 'Book a Session' ? 'tel:+917067601040' : '#'}
                       style={{ fontFamily: 'var(--font-sans)', fontSize: '.85rem', fontWeight: 400, color: 'var(--grey-1)', textDecoration: 'none', cursor: 'none', transition: 'color .3s' }}
                       onMouseEnter={e => (e.currentTarget.style.color = 'var(--red-bright)')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'var(--grey-1)')}

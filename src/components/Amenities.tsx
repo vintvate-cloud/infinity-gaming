@@ -245,13 +245,13 @@ export default function Amenities() {
                 </div>
 
                 <div style={{ marginTop: '.25rem' }}>
-                  <button
-                    onClick={() => window.dispatchEvent(new CustomEvent('openContactModal'))}
+                  <a
+                    href="tel:+917067601040"
                     className="btn btn-red"
-                    style={{ padding: '.85rem 2.2rem', fontSize: '.78rem' }}
+                    style={{ padding: '.85rem 2.2rem', fontSize: '.78rem', textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
                   >
                     Reserve {card.title.split(' ')[0]}
-                  </button>
+                  </a>
                 </div>
               </div>
 
