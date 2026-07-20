@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
-const ADMIN_PASSWORD = 'admin'; // Keeping it simple
+const ADMIN_PASSWORD = 'admin-neongaming'; // Keeping it simple
 
 export async function POST(request: Request) {
   try {
