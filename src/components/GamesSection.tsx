@@ -10,8 +10,66 @@ gsap.registerPlugin(ScrollTrigger);
 const FALLBACKS: Record<string, string[]> = {
   singleplayer: ['#281016', '#221218', '#1F0C14', '#2B121A'],
   twoplayer:    ['#20121A', '#291018', '#1A0C16', '#261214'],
-  multiplayer:  ['#1D101C', '#281014', '#200E18', '#1C0D16'],
+  fourplayer:   ['#1D101C', '#281014', '#200E18', '#1C0D16'],
 };
+
+function GameCardImage({ src, title, genre, activeCategory, index }: { src: string, title: string, genre: string, activeCategory: string, index: number }) {
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setError(false);
+  }, [activeCategory, src]);
+
+  if (error) {
+    const bgColor = FALLBACKS[activeCategory]?.[index % 4] ?? '#201018';
+    return (
+      <div style={{
+        background: bgColor,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        aspectRatio: '3/4',
+        width: '100%',
+        height: '100%',
+        textAlign: 'center',
+        padding: '1.5rem 1rem'
+      }}>
+        <div>
+          <div style={{
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: '1.8rem',
+            color: 'rgba(255, 30, 39, 0.85)',
+            lineHeight: 1.1,
+            letterSpacing: '0.04em'
+          }}>
+            {title}
+          </div>
+          <div style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: '0.75rem',
+            color: 'rgba(245, 245, 247, 0.7)',
+            marginTop: '0.5rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase'
+          }}>
+            {genre}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={title}
+      className="game-card-img"
+      loading="lazy"
+      referrerPolicy="no-referrer"
+      onError={() => setError(true)}
+    />
+  );
+}
 
 export default function GamesSection() {
   const ref = useRef<HTMLElement>(null);
@@ -19,7 +77,7 @@ export default function GamesSection() {
   const [gamesList, setGamesList] = useState(games);
 
   useEffect(() => {
-    fetch('/api/games')
+    fetch('/api/games', { cache: 'no-store' })
       .then(res => res.json())
       .then(data => {
         if (data && Array.isArray(data) && data.length > 0) {
@@ -131,33 +189,12 @@ export default function GamesSection() {
               }}
             >
               <div className="game-card-img-wrap" style={{ aspectRatio: '3/4', borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0' }}>
-                <img
+                <GameCardImage
                   src={game.poster}
-                  alt={game.title}
-                  className="game-card-img"
-                  loading="lazy"
-                  onError={e => {
-                    const el = e.currentTarget as HTMLImageElement;
-                    el.style.display = 'none';
-                    const wrap = el.parentElement;
-                    if (wrap && !wrap.dataset.fallback) {
-                      wrap.dataset.fallback = 'true';
-                      wrap.style.background = FALLBACKS[active]?.[i % 4] ?? '#201018';
-                      wrap.style.display = 'flex';
-                      wrap.style.alignItems = 'center';
-                      wrap.style.justifyContent = 'center';
-                      wrap.style.aspectRatio = '3/4';
-                      wrap.innerHTML = `
-                        <div style="text-align:center;padding:1.5rem 1rem">
-                          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:rgba(255,30,39,0.85);line-height:1.1;letter-spacing:0.04em">
-                            ${game.title}
-                          </div>
-                          <div style="font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(245,245,247,0.7);margin-top:0.5rem;letter-spacing:0.12em;text-transform:uppercase">
-                            ${game.genre}
-                          </div>
-                        </div>`;
-                    }
-                  }}
+                  title={game.title}
+                  genre={game.genre}
+                  activeCategory={active}
+                  index={i}
                 />
                 <div className="game-card-overlay" />
 

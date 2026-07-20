@@ -1,33 +1,23 @@
 [
   {
+    "id": "rdr2",
+    "title": "Red Dead Redemption 2",
+    "genre": "Open World",
+    "category": "singleplayer",
+    "platform": "Both",
+    "rating": "9.7",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/library_600x900_2x.jpg",
+    "description": "An epic tale of honor and loyalty at the dawn of the modern age."
+  },
+  {
     "id": "gta5",
-    "title": "GTA V",
+    "title": "Grand Theft Auto V (GTA V)",
     "genre": "Open World",
     "category": "singleplayer",
     "platform": "Both",
     "rating": "9.5",
     "poster": "https://cdn.akamai.steamstatic.com/steam/apps/271590/library_600x900_2x.jpg",
     "description": "The definitive open-world crime epic."
-  },
-  {
-    "id": "miles",
-    "title": "Spider-Man: Miles Morales",
-    "genre": "Action-Adventure",
-    "category": "singleplayer",
-    "platform": "PS5",
-    "rating": "9.0",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/library_600x900_2x.jpg",
-    "description": "Miles swings into his own legacy."
-  },
-  {
-    "id": "uncharted",
-    "title": "Uncharted: Legacy of Thieves",
-    "genre": "Action-Adventure",
-    "category": "singleplayer",
-    "platform": "PS5",
-    "rating": "8.8",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1659420/library_600x900_2x.jpg",
-    "description": "Cinematic adventure across the globe."
   },
   {
     "id": "gow",
@@ -40,24 +30,74 @@
     "description": "Kratos and Atreus journey through the Nine Realms."
   },
   {
-    "id": "acv",
-    "title": "Assassin's Creed Valhalla",
-    "genre": "Action-RPG",
+    "id": "uncharted",
+    "title": "Uncharted",
+    "genre": "Action-Adventure",
     "category": "singleplayer",
-    "platform": "Both",
-    "rating": "8.5",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2208920/library_600x900_2x.jpg",
-    "description": "Lead a Viking clan across England."
+    "platform": "PS5",
+    "rating": "8.8",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1659420/library_600x900_2x.jpg",
+    "description": "Cinematic adventure across the globe."
   },
   {
-    "id": "aco",
-    "title": "Assassin's Creed Odyssey",
-    "genre": "Action-RPG",
+    "id": "ghost",
+    "title": "Ghost of Tsushima",
+    "genre": "Open World",
+    "category": "singleplayer",
+    "platform": "PS5",
+    "rating": "9.3",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2215430/library_600x900_2x.jpg",
+    "description": "Samurai epic set in feudal Japan."
+  },
+  {
+    "id": "gtasa_de",
+    "title": "Grand Theft Auto: San Andreas – Definitive Edition",
+    "genre": "Open World",
     "category": "singleplayer",
     "platform": "Both",
-    "rating": "8.6",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/882930/library_600x900_2x.jpg",
-    "description": "Epic odyssey through ancient Greece."
+    "rating": "8.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1547000/library_600x900_2x.jpg",
+    "description": "The genre-defining classic updated for a new generation."
+  },
+  {
+    "id": "rev",
+    "title": "Resident Evil Village",
+    "genre": "Survival Horror",
+    "category": "singleplayer",
+    "platform": "Both",
+    "rating": "9.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1196590/library_600x900_2x.jpg",
+    "description": "Gothic horror in a terrifying village."
+  },
+  {
+    "id": "spiderman2",
+    "title": "Marvel's Spider-Man 2",
+    "genre": "Action-Adventure",
+    "category": "singleplayer",
+    "platform": "PS5",
+    "rating": "9.6",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2651280/library_600x900_2x.jpg",
+    "description": "Peter Parker and Miles Morales return for an epic new adventure."
+  },
+  {
+    "id": "spiderman1",
+    "title": "Marvel's Spider-Man",
+    "genre": "Action-Adventure",
+    "category": "singleplayer",
+    "platform": "Both",
+    "rating": "9.2",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/library_600x900_2x.jpg",
+    "description": "Play as an experienced Peter Parker, fighting big crime in Marvel's New York."
+  },
+  {
+    "id": "miles",
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "genre": "Action-Adventure",
+    "category": "singleplayer",
+    "platform": "PS5",
+    "rating": "9.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1817190/library_600x900_2x.jpg",
+    "description": "Miles swings into his own legacy."
   },
   {
     "id": "tlou1",
@@ -76,81 +116,81 @@
     "category": "singleplayer",
     "platform": "PS5",
     "rating": "9.4",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1888930/header.jpg",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2531310/library_600x900_2x.jpg",
     "description": "A harrowing journey of vengeance."
   },
   {
-    "id": "yotei",
-    "title": "Ghost of Yōtei",
-    "genre": "Open World",
-    "category": "singleplayer",
-    "platform": "PS5",
-    "rating": "9.6",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2215430/library_600x900_2x.jpg",
-    "description": "The next chapter of Sucker Punch's samurai saga."
-  },
-  {
-    "id": "mw2019",
-    "title": "Call of Duty: Modern Warfare",
-    "genre": "FPS",
-    "category": "singleplayer",
-    "platform": "Both",
-    "rating": "8.8",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2000950/library_600x900_2x.jpg",
-    "description": "The reboot that redefined modern FPS."
-  },
-  {
-    "id": "mw3",
-    "title": "Call of Duty: MW III",
+    "id": "mw3_camp",
+    "title": "Call of Duty: Modern Warfare III (Campaign)",
     "genre": "FPS",
     "category": "singleplayer",
     "platform": "Both",
     "rating": "8.3",
     "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2519060/library_600x900_2x.jpg",
-    "description": "The most ambitious Call of Duty yet."
+    "description": "The singleplayer campaign of Modern Warfare III."
   },
   {
-    "id": "rev",
-    "title": "Resident Evil Village",
-    "genre": "Survival Horror",
+    "id": "hogwarts",
+    "title": "Hogwarts Legacy",
+    "genre": "Fantasy RPG",
     "category": "singleplayer",
     "platform": "Both",
     "rating": "9.0",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1196590/library_600x900_2x.jpg",
-    "description": "Gothic horror in a terrifying village."
+    "poster": "data:image/jpeg;base64,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",
+    "description": "Experience Hogwarts in the 1800s. Your legacy is what you make of it."
   },
   {
-    "id": "wsm2",
-    "title": "Warhammer: Space Marine 2",
-    "genre": "Third-Person Shooter",
+    "id": "cyberpunk",
+    "title": "Cyberpunk 2077",
+    "genre": "RPG / Open World",
     "category": "singleplayer",
     "platform": "Both",
-    "rating": "8.7",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2183900/library_600x900_2x.jpg",
-    "description": "Annihilate the alien swarm. For the Emperor."
+    "rating": "9.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/library_600x900_2x.jpg",
+    "description": "An open-world action-adventure RPG set in the megacity of Night City."
   },
   {
-    "id": "fifa24",
-    "title": "EA Sports FC 24",
-    "genre": "Football",
-    "category": "twoplayer",
+    "id": "acshadows",
+    "title": "Assassin's Creed Shadows",
+    "genre": "Action-RPG",
+    "category": "singleplayer",
     "platform": "Both",
-    "rating": "8.2",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2195250/library_600x900_2x.jpg",
-    "description": "The world's most popular football simulation."
+    "rating": "TBA",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/3159330/library_600x900_2x.jpg",
+    "description": "Live the intertwined stories of Naoe, a shinobi, and Yasuke, a legendary samurai."
   },
   {
-    "id": "wwe24",
-    "title": "WWE 2K24",
-    "genre": "Wrestling",
-    "category": "twoplayer",
+    "id": "acmirage",
+    "title": "Assassin's Creed Mirage",
+    "genre": "Action-Adventure",
+    "category": "singleplayer",
     "platform": "Both",
-    "rating": "8.1",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2394660/library_600x900_2x.jpg",
-    "description": "Step into the ring — settle it like champions."
+    "rating": "8.3",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/3035570/library_600x900_2x.jpg",
+    "description": "The story of Basim, a cunning street thief seeking answers in Baghdad."
   },
   {
-    "id": "mk1",
+    "id": "acv",
+    "title": "Assassin's Creed Valhalla",
+    "genre": "Action-RPG",
+    "category": "singleplayer",
+    "platform": "Both",
+    "rating": "8.5",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2208920/library_600x900_2x.jpg",
+    "description": "Lead a Viking clan across England."
+  },
+  {
+    "id": "aco",
+    "title": "Assassin's Creed Odyssey",
+    "genre": "Action-RPG",
+    "category": "singleplayer",
+    "platform": "Both",
+    "rating": "8.6",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/812140/library_600x900_2x.jpg",
+    "description": "Epic odyssey through ancient Greece."
+  },
+  {
+    "id": "mk1_tp",
     "title": "Mortal Kombat 1",
     "genre": "Fighting",
     "category": "twoplayer",
@@ -160,7 +200,7 @@
     "description": "Liu Kang resets history. All-out brutality."
   },
   {
-    "id": "tek8",
+    "id": "tek8_tp",
     "title": "Tekken 8",
     "genre": "Fighting",
     "category": "twoplayer",
@@ -170,17 +210,67 @@
     "description": "King of Iron Fist — more brutal than ever."
   },
   {
-    "id": "sf6",
-    "title": "Street Fighter 6",
+    "id": "dbsparking_tp",
+    "title": "Dragon Ball: Sparking! ZERO",
     "genre": "Fighting",
     "category": "twoplayer",
     "platform": "Both",
-    "rating": "9.1",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1794680/library_600x900_2x.jpg",
-    "description": "The greatest fighting game ever made."
+    "rating": "9.2",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1790600/library_600x900_2x.jpg",
+    "description": "Take the legendary gameplay of the Budokai Tenkaichi series to historic levels."
   },
   {
-    "id": "itt",
+    "id": "jumpforce_tp",
+    "title": "Jump Force",
+    "genre": "Fighting",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "7.8",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/816020/library_600x900_2x.jpg",
+    "description": "Manga's most famous heroes are thrown into a whole new battlefield."
+  },
+  {
+    "id": "sfv_ce",
+    "title": "Street Fighter V: Champion Edition",
+    "genre": "Fighting",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "8.5",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/310950/library_600x900_2x.jpg",
+    "description": "Capcom's modern classic fighting game with the complete Champion Edition roster."
+  },
+  {
+    "id": "wwe2k25_tp",
+    "title": "WWE 2K25",
+    "genre": "Wrestling",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "8.4",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2878960/library_600x900_2x.jpg",
+    "description": "Face off against your rival in high-stakes head-to-head wrestling matches."
+  },
+  {
+    "id": "gow_reloaded",
+    "title": "Gears of War: Reloaded",
+    "genre": "Co-op / TPS",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "8.6",
+    "poster": "https://upload.wikimedia.org/wikipedia/en/b/bf/Gears_of_war_cover_art.jpg",
+    "description": "Fight the Locust Horde together in this ultimate co-op campaign."
+  },
+  {
+    "id": "splitfiction_tp",
+    "title": "Split Fiction",
+    "genre": "Co-op / Adventure",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "9.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/3052150/library_600x900_2x.jpg",
+    "description": "Hazelight's next co-op adventure. Mio and Zoe must work together to escape."
+  },
+  {
+    "id": "itt_tp",
     "title": "It Takes Two",
     "genre": "Co-op",
     "category": "twoplayer",
@@ -190,103 +280,153 @@
     "description": "The greatest co-op game ever made."
   },
   {
-    "id": "mkxl",
-    "title": "Mortal Kombat XL",
-    "genre": "Fighting",
+    "id": "awayout_tp",
+    "title": "A Way Out",
+    "genre": "Co-op / Adventure",
     "category": "twoplayer",
     "platform": "Both",
-    "rating": "8.5",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/307780/library_600x900_2x.jpg",
-    "description": "The complete brutal package — all DLC included."
+    "rating": "8.9",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1222700/library_600x900_2x.jpg",
+    "description": "An exclusive co-op adventure where you play the role of two prisoners making their escape."
   },
   {
-    "id": "ufc5",
-    "title": "EA Sports UFC 5",
-    "genre": "MMA Fighting",
+    "id": "re5_tp",
+    "title": "Resident Evil 5",
+    "genre": "Co-op / Survival Horror",
     "category": "twoplayer",
-    "platform": "PS5",
-    "rating": "8.3",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2394660/header.jpg",
-    "description": "The most realistic MMA simulation."
+    "platform": "Both",
+    "rating": "8.6",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/219640/library_600x900_2x.jpg",
+    "description": "Team up with Chris and Sheva to uncover a bioterrorist threat in Africa."
   },
   {
-    "id": "warzone",
-    "title": "Call of Duty: Warzone",
-    "genre": "Battle Royale",
-    "category": "multiplayer",
+    "id": "asphalt_tp",
+    "title": "Asphalt Legends",
+    "genre": "Racing",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "8.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1815780/library_600x900_2x.jpg",
+    "description": "Race head-to-head in high-octane splitscreen arcade challenges."
+  },
+  {
+    "id": "dirt5_tp",
+    "title": "DiRT 5",
+    "genre": "Racing",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "8.2",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1038360/library_600x900_2x.jpg",
+    "description": "Bold off-road racing experience with intense 2-player split-screen battle."
+  },
+  {
+    "id": "rl_tp",
+    "title": "Rocket League",
+    "genre": "Sports",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "9.1",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/252950/library_600x900_2x.jpg",
+    "description": "Soccer meets cars — settle the score in intense 1v1 splitscreen matches."
+  },
+  {
+    "id": "mw3_tp",
+    "title": "Call of Duty: Modern Warfare III",
+    "genre": "FPS",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "8.3",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2519060/library_600x900_2x.jpg",
+    "description": "Jump into local split-screen multiplayer matches or cooperative spec ops."
+  },
+  {
+    "id": "bo2_tp",
+    "title": "Call of Duty: Black Ops II",
+    "genre": "FPS",
+    "category": "twoplayer",
+    "platform": "Both",
+    "rating": "9.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/202970/library_600x900_2x.jpg",
+    "description": "Settle the rivalry in 1v1 split-screen or play local zombies co-op."
+  },
+  {
+    "id": "fc25",
+    "title": "EA Sports FC 25",
+    "genre": "Football",
+    "category": "fourplayer",
+    "platform": "Both",
+    "rating": "8.3",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2963840/library_600x900_2x.jpg",
+    "description": "Play together in Rush, a new 5v5 mode, and lead your club to victory."
+  },
+  {
+    "id": "wwe2k25",
+    "title": "WWE 2K25",
+    "genre": "Wrestling",
+    "category": "fourplayer",
+    "platform": "Both",
+    "rating": "8.4",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2878960/library_600x900_2x.jpg",
+    "description": "Step back into the ring with up to 4 players for chaotic local matchups."
+  },
+  {
+    "id": "bo3",
+    "title": "Call of Duty: Black Ops III",
+    "genre": "FPS",
+    "category": "fourplayer",
     "platform": "Both",
     "rating": "8.8",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1962660/library_600x900_2x.jpg",
-    "description": "150-player squad warfare with no mercy."
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/311210/library_600x900_2x.jpg",
+    "description": "4-player co-op campaign and classic local splitscreen zombies."
   },
   {
-    "id": "fortnite",
-    "title": "Fortnite",
-    "genre": "Battle Royale",
-    "category": "multiplayer",
+    "id": "bo2",
+    "title": "Call of Duty: Black Ops II",
+    "genre": "FPS",
+    "category": "fourplayer",
     "platform": "Both",
-    "rating": "8.5",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/header.jpg",
-    "description": "The cultural phenomenon battle royale."
-  },
-  {
-    "id": "apex",
-    "title": "Apex Legends",
-    "genre": "Battle Royale",
-    "category": "multiplayer",
-    "platform": "Both",
-    "rating": "8.7",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/library_600x900_2x.jpg",
-    "description": "Fast-paced legend-based battle royale."
-  },
-  {
-    "id": "valorant",
-    "title": "Valorant",
-    "genre": "Tactical FPS",
-    "category": "multiplayer",
-    "platform": "PC",
     "rating": "9.0",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg",
-    "description": "Riot's ultra-precise 5v5 tactical shooter."
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/202970/library_600x900_2x.jpg",
+    "description": "Classic Call of Duty local splitscreen action and zombies mode."
   },
   {
-    "id": "cs2",
-    "title": "Counter-Strike 2",
-    "genre": "Tactical FPS",
-    "category": "multiplayer",
-    "platform": "PC",
-    "rating": "8.9",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/730/library_600x900_2x.jpg",
-    "description": "The gold standard of competitive shooters."
+    "id": "asphalt",
+    "title": "Asphalt Legends",
+    "genre": "Racing",
+    "category": "fourplayer",
+    "platform": "Both",
+    "rating": "8.0",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1815780/library_600x900_2x.jpg",
+    "description": "Experience the adrenaline of arcade racing with 4-player splitscreen."
   },
   {
-    "id": "pubg",
-    "title": "PUBG: Battlegrounds",
-    "genre": "Battle Royale",
-    "category": "multiplayer",
-    "platform": "PC",
-    "rating": "8.4",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/578080/library_600x900_2x.jpg",
-    "description": "The original battle royale — still the best."
+    "id": "dirt5",
+    "title": "DiRT 5",
+    "genre": "Racing",
+    "category": "fourplayer",
+    "platform": "Both",
+    "rating": "8.2",
+    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/1038360/library_600x900_2x.jpg",
+    "description": "Let Loose in DIRT 5 - the boldest off-road racing experience with 4-player splitscreen."
+  },
+  {
+    "id": "ctr",
+    "title": "Crash Team Racing Nitro-Fueled (CTR)",
+    "genre": "Racing",
+    "category": "fourplayer",
+    "platform": "Both",
+    "rating": "9.0",
+    "poster": "https://upload.wikimedia.org/wikipedia/en/e/e0/Crash_Team_Racing_Nitro-Fueled_cover_art.jpg",
+    "description": "Crash is back in the driver's seat! Start your engines with up to 4 players splitscreen."
   },
   {
     "id": "rl",
     "title": "Rocket League",
     "genre": "Sports",
-    "category": "multiplayer",
+    "category": "fourplayer",
     "platform": "Both",
     "rating": "9.1",
     "poster": "https://cdn.akamai.steamstatic.com/steam/apps/252950/library_600x900_2x.jpg",
-    "description": "Soccer meets cars — impossibly addictive."
-  },
-  {
-    "id": "ow2",
-    "title": "Overwatch 2",
-    "genre": "Hero Shooter",
-    "category": "multiplayer",
-    "platform": "Both",
-    "rating": "8.3",
-    "poster": "https://cdn.akamai.steamstatic.com/steam/apps/2357570/library_600x900_2x.jpg",
-    "description": "Team-based hero action reimagined."
+    "description": "Soccer meets cars — splitscreen and online competitive fun."
   }
 ]

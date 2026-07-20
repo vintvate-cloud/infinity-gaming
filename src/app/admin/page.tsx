@@ -260,7 +260,7 @@ export default function AdminPage() {
                   <select className="form-input" value={gameData.category} onChange={e => setGameData({...gameData, category: e.target.value})}>
                     <option value="singleplayer">Single Player</option>
                     <option value="twoplayer">2 Player</option>
-                    <option value="multiplayer">Multiplayer</option>
+                    <option value="fourplayer">4 Player</option>
                   </select>
                 </div>
                 <div>

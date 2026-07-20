@@ -2,6 +2,8 @@ import { NextResponse, NextRequest } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+export const dynamic = 'force-dynamic';
+
 const dataFilePath = path.join(process.cwd(), 'src', 'data', 'games.json');
 
 function getGames() {
@@ -22,7 +24,11 @@ function saveGames(data: any) {
 }
 
 export async function GET() {
-  return NextResponse.json(getGames());
+  return NextResponse.json(getGames(), {
+    headers: {
+      'Cache-Control': 'no-store, max-age=0, must-revalidate',
+    }
+  });
 }
 
 export async function POST(request: Request) {
