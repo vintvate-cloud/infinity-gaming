@@ -59,12 +59,13 @@ export default function Location() {
                 // Opening Hours
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '.4rem' }}>
-                <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--white)', fontSize: '.95rem' }}>Monday — Sunday</span>
-                <span style={{ fontFamily: 'var(--font-tech)', color: 'var(--red-bright)', fontWeight: 700, fontSize: '.95rem' }}>10:00 AM – 11:00 PM</span>
+                <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--white)', fontSize: '.95rem' }}>Monday — Friday</span>
+                <span style={{ fontFamily: 'var(--font-tech)', color: 'var(--red-bright)', fontWeight: 700, fontSize: '.95rem' }}>12:00 PM – 11:00 PM</span>
               </div>
-              <p className="body-sm" style={{ fontSize: '.85rem' }}>
-                Open 365 days a year including national holidays.
-              </p>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '.4rem' }}>
+                <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, color: 'var(--white)', fontSize: '.95rem' }}>Saturday & Sunday</span>
+                <span style={{ fontFamily: 'var(--font-tech)', color: 'var(--red-bright)', fontWeight: 700, fontSize: '.95rem' }}>11:00 AM – 10:00 PM</span>
+              </div>
             </div>
 
             <div style={{ padding: '2rem', background: 'var(--surface-2)', borderRadius: 'var(--radius-xl)', border: '1px solid var(--border-md)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>

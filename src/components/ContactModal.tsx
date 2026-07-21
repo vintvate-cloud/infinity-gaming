@@ -3,11 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const SESSION_TYPES = [
   { id: 'ps5',     label: 'PS5 Console' },
-  { id: 'pc',      label: 'PC Gaming'   },
   { id: 'pool',    label: 'Pool Table'  },
-  { id: 'private', label: 'VIP Private Suite'},
   { id: 'racing',  label: 'Racing Sim'  },
-  { id: 'movie',   label: 'Movie Night' },
 ];
 
 export default function ContactModal() {
@@ -159,8 +156,8 @@ export default function ContactModal() {
               {/* Hours note */}
               <div className="hours-pill" style={{ justifyContent: 'center', marginTop: '.5rem' }}>
                 <div className="live-dot" />
-                <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.75rem', color: 'var(--white)', fontWeight: 600, letterSpacing: '.08em' }}>
-                  OPEN DAILY · 10 : 00 AM — 11 : 00 PM
+                <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.75rem', color: 'var(--white)', fontWeight: 600, letterSpacing: '.05em' }}>
+                  MON-FRI: 12 PM - 11 PM | SAT-SUN: 11 AM - 10 PM
                 </span>
               </div>
 

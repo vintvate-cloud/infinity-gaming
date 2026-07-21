@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AMENITIES = [
   {
     num: '01',
-    title: 'PS5 PRO LOUNGE',
+    title: 'PS5 LOUNGE',
     tagline: 'Console Gaming at its Zenith',
     desc: 'Immerse yourself in true 4K HDR gaming on Sony OLED displays. Powered by DualSense haptic feedback and tempest 3D audio headsets.',
     features: [
@@ -24,18 +24,18 @@ const AMENITIES = [
   },
   {
     num: '02',
-    title: 'ULTRA PC BATTLESTATIONS',
-    tagline: 'Uncompromising FPS & Cyberpunk Visuals',
-    desc: 'Custom liquid-cooled rigs featuring RTX 4090 GPUs, Intel i9 processors, 240Hz Esports monitors, and SecretLab Titan Evo ergonomic chairs.',
+    title: 'SIM RACING RIG',
+    tagline: 'Realistic Track Experience',
+    desc: 'Test your driving skills on our dedicated Logitech G29 Sim Racing setup complete with force feedback and a manual gearbox.',
     features: [
-      'Nvidia RTX 4090 & Intel i9 Rigs',
-      'ZOWIE 240Hz Esports Monitors',
-      'Custom Mechanical Keyboards',
-      '1 Gbps Dedicated Fiber Line',
+      'Logitech G29 Force Feedback Wheel',
+      'Manual Gearbox Shifter',
+      'Racing Cockpit & Bucket Seat',
+      'Top Racing Games Included',
     ],
     bgGradient: 'linear-gradient(135deg, #220B14 0%, #0C0408 100%)',
     accentColor: '#E50914',
-    icon: '💻',
+    icon: '🏎️',
     image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80',
   },
   {
@@ -53,22 +53,6 @@ const AMENITIES = [
     accentColor: '#FF4D55',
     icon: '🎱',
     image: '/images/pool_table.png',
-  },
-  {
-    num: '04',
-    title: 'VIP PRIVATE SUITES',
-    tagline: 'Exclusive Private Suites for Groups',
-    desc: 'Sound-isolated private suites for up to 8 players. Equipped with multi-console setups, 75" 4K screens, surround sound, mini-fridge & dedicated room service.',
-    features: [
-      'Seating for up to 8 Gamers',
-      '75" 4K Cinema Screen & Surround',
-      'Multi-Platform (PS5 + PC)',
-      'Mini-bar & Direct Food/Drink Ordering',
-    ],
-    bgGradient: 'linear-gradient(135deg, #2E0E1D 0%, #12060C 100%)',
-    accentColor: '#FF1E27',
-    icon: '🚪',
-    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 

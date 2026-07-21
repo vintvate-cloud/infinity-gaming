@@ -23,12 +23,12 @@ export default function About() {
   }, []);
 
   const features = [
-    { num: '01', label: '1 Gbps Low-Ping Fiber', desc: 'Zero-lag high refresh rate gaming' },
-    { num: '02', label: 'RTX 4090 Monster Rigs', desc: 'Ultra-spec liquid-cooled setups' },
-    { num: '03', label: 'PS5 Pro with 4K OLED', desc: 'Console gaming at peak perfection' },
-    { num: '04', label: 'SecretLab Ergonomic Chairs', desc: 'All-day comfort & posture support' },
-    { num: '05', label: 'Pro 7.1 Surround Headsets', desc: 'Complete auditory spatial awareness' },
-    { num: '06', label: 'Full Gourmet Snack Bar', desc: 'Fuel up directly at your station' },
+    { num: '01', label: 'PS5 Gaming Setup', desc: '4K HDR gaming with DualSense controllers' },
+    { num: '02', label: 'Slate Pool Tables', desc: 'Professional slate tables with cues' },
+    { num: '03', label: 'Logitech G29 Racing Rig', desc: 'Sim racing with force feedback & gearbox' },
+    { num: '04', label: 'Flexible Pricing', desc: 'Starting from ₹63/hr with pay-per-minute billing' },
+    { num: '05', label: 'All AAA & Multiplayer Titles', desc: 'Huge library for singleplayer & co-op' },
+    { num: '06', label: 'Neon Ambiance', desc: 'Purple & Red atmospheric lighting' },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function About() {
           <div className="hours-pill">
             <div className="live-dot" />
             <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.78rem', letterSpacing: '.1em', color: 'var(--white)', fontWeight: 600 }}>
-              OPEN DAILY · 10 AM – 11 PM
+              MON-FRI: 12-11 PM | SAT-SUN: 11 AM-10 PM
             </span>
           </div>
         </div>

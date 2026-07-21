@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "NEON GAMING — Premium Gaming Lounge | MP Nagar, Bhopal",
   description:
-    "Bhopal's most premium gaming lounge in MP Nagar. PS5 consoles, RTX 4090 PCs, pool tables, private rooms, and 200+ titles. Open daily 10 AM – 11 PM.",
+    "Bhopal's most premium gaming lounge in MP Nagar. PS5 consoles, pool tables, and Racing Sim. Mon-Fri 12-11 PM, Sat-Sun 11 AM-10 PM.",
   keywords: ["gaming cafe bhopal", "NEON GAMING", "ps5 bhopal", "gaming lounge MP nagar", "PC gaming bhopal"],
   openGraph: {
     title: "NEON GAMING — The Premium Gaming Lounge | MP Nagar, Bhopal",

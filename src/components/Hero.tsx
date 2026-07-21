@@ -6,10 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const MARQUEE = [
-  'PS5 PRO GAMING', '⚡', 'RTX 4090 PC RIGS', '⚡', 'SLATE POOL TABLES', '⚡',
-  'VIP PRIVATE SUITES', '⚡', 'MP NAGAR BHOPAL', '⚡', '200+ GAME VAULT', '⚡',
-  'PS5 PRO GAMING', '⚡', 'RTX 4090 PC RIGS', '⚡', 'SLATE POOL TABLES', '⚡',
-  'VIP PRIVATE SUITES', '⚡', 'MP NAGAR BHOPAL', '⚡', '200+ GAME VAULT', '⚡',
+  'PS5 GAMING', '⚡', 'RACING SIMULATOR', '⚡', 'SLATE POOL TABLES', '⚡',
+  'MP NAGAR BHOPAL', '⚡', 'PS5 GAMING', '⚡', 'RACING SIMULATOR', '⚡',
+  'SLATE POOL TABLES', '⚡', 'MP NAGAR BHOPAL', '⚡',
 ];
 
 const openModal = () => window.dispatchEvent(new CustomEvent('openContactModal'));
@@ -109,7 +108,7 @@ export default function Hero() {
           {/* Subtitle & CTAs */}
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
             <p className="hero-sub body-sm" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.2rem)', maxWidth: '440px', fontWeight: 400 }}>
-              PS5 PRO. RTX 4090 Rigs. Slate Pool Tables. Private VIP Suites.
+              PS5 Gaming. Racing Simulator. Slate Pool Tables.
               Experience next-level gaming in Bhopal.
             </p>
 

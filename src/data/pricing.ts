@@ -27,12 +27,14 @@ export const pricing: PricingCategory[] = [
     ],
   },
   {
-    id: 'pc',
-    title: 'PC Gaming',
-    emoji: '💻',
+    id: 'pool',
+    title: 'Pool Table',
+    emoji: '🎱',
+    highlight: true,
     tiers: [
-      { label: '1 Hour', price: '₹100', unit: 'per hour' },
+      { label: '1 Hour', price: '₹150', unit: 'per hour' },
     ],
+    note: 'Professional slate tables, cues included',
   },
   {
     id: 'racing',
@@ -41,44 +43,6 @@ export const pricing: PricingCategory[] = [
     tiers: [
       { label: '1 Hour', price: '₹300', unit: 'per hour' },
     ],
-    note: 'Full motion sim rig with force feedback wheel',
-  },
-  {
-    id: 'vr',
-    title: 'VR Cricket',
-    emoji: '🏏',
-    tiers: [
-      { label: '15 Minutes', price: '₹100', unit: 'flat' },
-      { label: '1 Hour',     price: '₹300', unit: 'flat' },
-    ],
-    note: 'Full immersive VR cricket experience',
-  },
-  {
-    id: 'pool',
-    title: 'Pool Table',
-    emoji: '🎱',
-    tiers: [
-      { label: '1 Hour', price: '₹150', unit: 'per hour' },
-    ],
-    note: 'Professional slate tables, cues included',
-  },
-  {
-    id: 'private',
-    title: 'Gaming Room',
-    emoji: '🚪',
-    tiers: [
-      { label: '1 Hour', price: '₹300', unit: 'per hour' },
-    ],
-    note: 'Private room — full surround sound, up to 8 people',
-    highlight: true,
-  },
-  {
-    id: 'movie',
-    title: 'Movie Screening',
-    emoji: '🎬',
-    tiers: [
-      { label: 'Per Film', price: '₹500', unit: 'flat rate' },
-    ],
-    note: 'Big screen, surround audio, any film you want',
+    note: 'Full motion sim rig with force feedback wheel & gearbox',
   },
 ];

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const LINKS = [
   {
     title: 'Experience',
-    items: ['PS5 Pro Gaming', 'RTX 4090 Rigs', 'Slate Pool Tables', 'VIP Private Suites', 'Racing Sim', 'VR Cricket'],
+    items: ['PS5 Pro Gaming', 'Slate Pool Tables', 'Racing Sim'],
   },
   {
     title: 'Vault',
@@ -82,8 +82,8 @@ export default function Footer() {
 
             <div className="hours-pill" style={{ display: 'inline-flex', marginBottom: '1.75rem' }}>
               <div className="live-dot" />
-              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.75rem', letterSpacing: '.1em', color: 'var(--white)', fontWeight: 600 }}>
-                10 AM – 11 PM · Daily
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.75rem', letterSpacing: '.05em', color: 'var(--white)', fontWeight: 600 }}>
+                Mon-Fri: 12-11 PM | Sat-Sun: 11 AM-10 PM
               </span>
             </div>
 
