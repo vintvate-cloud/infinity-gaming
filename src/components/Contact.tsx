@@ -14,7 +14,7 @@ export default function Contact() {
           boxShadow: '0 20px 60px rgba(0, 0, 0, 0.7), 0 0 30px var(--red-glow)',
         }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-            
+
             {/* Left */}
             <div>
               <div className="section-eyebrow">
@@ -47,7 +47,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div style={{ fontSize: '.72rem', color: 'var(--grey-1)', textTransform: 'uppercase', letterSpacing: '.1em', fontWeight: 600 }}>Lounge Address</div>
-                    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.95rem', fontWeight: 600, color: 'var(--white)' }}>MP Nagar Zone II, Bhopal (MP)</div>
+                    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.95rem', fontWeight: 600, color: 'var(--white)' }}>Indrapuri Sector C (Near Gourav Dairy), Bhopal (MP)</div>
                   </div>
                 </div>
               </div>

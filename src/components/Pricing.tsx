@@ -227,45 +227,6 @@ export default function Pricing() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Bottom CTA Banner */}
-        <div style={{
-          marginTop: 'clamp(2rem, 4vw, 3.5rem)',
-          padding: 'clamp(1.25rem, 3.5vw, 2.5rem)',
-          borderRadius: 'var(--radius-xl)',
-          border: '1.5px solid var(--red-border)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '1.25rem',
-          background: 'linear-gradient(135deg, var(--surface-2), var(--surface-3))',
-          boxShadow: '0 15px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(229, 9, 20, 0.15)',
-        }}>
-          <div>
-            <div style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)',
-              letterSpacing: '.04em',
-              color: 'var(--white)',
-              marginBottom: '.3rem',
-              lineHeight: 1.1,
-            }}>
-              WALK IN ANYTIME OR BOOK A PRIVATE ROOM
-            </div>
-            <p className="body-sm" style={{ fontSize: '.88rem', maxWidth: '480px' }}>
-              No reservations required for regular PC and PS5 setups. For private rooms, movie screenings & groups, reserve online.
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%', maxWidth: '360px' }}>
-            <a href="tel:+917067601040" className="btn btn-red" style={{ flex: 1, textDecoration: 'none', textAlign: 'center' }}>
-              Book a Room
-            </a>
-            <a href="https://wa.me/917067601040" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ flex: 1 }}>
-              WhatsApp Us ↗
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
   );

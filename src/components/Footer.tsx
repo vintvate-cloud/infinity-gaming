@@ -16,7 +16,7 @@ const LINKS = [
   },
   {
     title: 'Quick Links',
-    items: ['MP Nagar Lounge', 'Operating Hours', 'Price Rates', 'Book a Session'],
+    items: ['Indrapuri Lounge', 'Operating Hours', 'Price Rates', 'Book a Session'],
   },
 ];
 
@@ -88,8 +88,8 @@ export default function Footer() {
             </div>
 
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.8rem', color: 'var(--grey-1)', lineHeight: 1.7 }}>
-              MP Nagar Zone II, Bhopal<br />
-              Madhya Pradesh — 462011
+              Indrapuri Sector C, Near Gourav Dairy<br />
+              Bhopal, Madhya Pradesh — 462022
             </div>
 
             {/* Socials */}
@@ -151,7 +151,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ marginTop: '3.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: '.75rem', fontWeight: 400, color: 'var(--grey-1)' }}>
-            © 2025 NEON GAMING, Bhopal. All rights reserved.
+            Indrapuri Sector C, Bhopal. All rights reserved.
           </span>
           <div style={{ display: 'flex', gap: '2rem' }}>
             {['Privacy Policy', 'Terms of Service', 'Sitemap'].map(t => (

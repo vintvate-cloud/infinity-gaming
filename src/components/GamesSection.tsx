@@ -130,7 +130,7 @@ export default function GamesSection() {
               </span>
             </h2>
             <p className="body-sm" style={{ maxWidth: '420px', fontSize: '1rem' }}>
-              {gamesList.length}+ AAA titles across PS5 & high-end PCs. Filter by playstyle below.
+              {gamesList.length}+ AAA titles across PS5. Filter by playstyle below.
             </p>
           </div>
         </div>

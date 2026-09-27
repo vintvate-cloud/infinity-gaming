@@ -7,8 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MARQUEE = [
   'PS5 GAMING', '⚡', 'RACING SIMULATOR', '⚡', 'SLATE POOL TABLES', '⚡',
-  'MP NAGAR BHOPAL', '⚡', 'PS5 GAMING', '⚡', 'RACING SIMULATOR', '⚡',
-  'SLATE POOL TABLES', '⚡', 'MP NAGAR BHOPAL', '⚡',
+  'Indrapuri BHOPAL', '⚡', 'PS5 GAMING', '⚡', 'RACING SIMULATOR', '⚡',
+  'SLATE POOL TABLES', '⚡', 'Indrapuri BHOPAL', '⚡',
 ];
 
 const openModal = () => window.dispatchEvent(new CustomEvent('openContactModal'));
@@ -68,7 +68,7 @@ export default function Hero() {
 
         {/* Layered gradients */}
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(9, 6, 8, 0.72)' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(9, 6, 8, 1) 0%, rgba(9, 6, 8, 0.5) 45%, rgba(9, 6, 8, 0.2) 80%, transparent 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(9, 6, 8, 1) 0%, rgba(9, 6, 8, 0.5) 45%, rgba(9, 6, 0.2) 80%, transparent 100%)' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 60% 40%, rgba(229, 9, 20, 0.15) 0%, transparent 65%)' }} />
 
         {/* Ghost background text */}
@@ -88,7 +88,7 @@ export default function Hero() {
 
           {/* Eyebrow */}
           <div className="hero-eyebrow section-eyebrow" style={{ marginBottom: '1.75rem' }}>
-            <span className="label">MP NAGAR · BHOPAL · ULTIMATE GAMING LOUNGE</span>
+            <span className="label">Indrapuri · BHOPAL · ULTIMATE GAMING LOUNGE</span>
           </div>
 
           {/* Big title */}

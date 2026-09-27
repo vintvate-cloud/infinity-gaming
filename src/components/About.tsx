@@ -26,9 +26,8 @@ export default function About() {
     { num: '01', label: 'PS5 Gaming Setup', desc: '4K HDR gaming with DualSense controllers' },
     { num: '02', label: 'Slate Pool Tables', desc: 'Professional slate tables with cues' },
     { num: '03', label: 'Logitech G29 Racing Rig', desc: 'Sim racing with force feedback & gearbox' },
-    { num: '04', label: 'Flexible Pricing', desc: 'Starting from ₹63/hr with pay-per-minute billing' },
-    { num: '05', label: 'All AAA & Multiplayer Titles', desc: 'Huge library for singleplayer & co-op' },
-    { num: '06', label: 'Neon Ambiance', desc: 'Purple & Red atmospheric lighting' },
+    { num: '04', label: 'All AAA & Multiplayer Titles', desc: 'Huge library for singleplayer & co-op' },
+    { num: '05', label: 'Neon Ambiance', desc: 'Purple & Red atmospheric lighting' },
   ];
 
   return (
@@ -58,13 +57,10 @@ export default function About() {
                 ULTRA-PREMIUM LOUNGE
               </span>
             </h2>
-            <p className="body-sm" style={{ marginBottom: '1.5rem' }}>
-              NEON GAMING was engineered with a single objective — delivering an unrivaled esports and entertainment lounge in MP Nagar, Bhopal.
-            </p>
             <p className="body-sm" style={{ marginBottom: '2.5rem' }}>
-              From high-fps PC setups to private 4K console suites and slate pool tables, every square foot offers peak comfort, lighting, and hospitality.
+              NEON GAMING was engineered with a single objective — delivering an unrivaled esports and entertainment lounge in Indrapuri Sector C, Bhopal.
             </p>
-            
+
             {/* Stats row */}
             <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
               {[{ v: '50+', l: 'Stations' }, { v: '200+', l: 'Game Titles' }, { v: '4.9★', l: 'Top Rated' }].map(s => (

@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 const SESSION_TYPES = [
-  { id: 'ps5',     label: 'PS5 Console' },
-  { id: 'pool',    label: 'Pool Table'  },
-  { id: 'racing',  label: 'Racing Sim'  },
+  { id: 'ps5', label: 'PS5 Console' },
+  { id: 'pool', label: 'Pool Table' },
+  { id: 'racing', label: 'Racing Sim' },
 ];
 
 export default function ContactModal() {
@@ -55,7 +55,7 @@ export default function ContactModal() {
               BOOK A SESSION
             </div>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '.72rem', color: 'var(--red-light)', letterSpacing: '.12em', marginTop: '.2rem', fontWeight: 600 }}>
-              NEON GAMING · MP NAGAR, BHOPAL
+              NEON GAMING · Indrapuri Sector C, BHOPAL
             </div>
           </div>
           <button
